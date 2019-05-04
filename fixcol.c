@@ -29,14 +29,15 @@ int fixcol(char* archivo_recibido,size_t n){
   return 0;
 }
 
-
+/*
 int main(int argc,char* argv[]){
   // Verifico que la cantidad de comandos sea correcta
   if(argc != 3){
-    printf("La funcion necesita dos parametros\n");
+    printf("Error: Cantidad erronea de parametros\n");
     return 0;
   }
-  int n = atol(argv[2]);
+  int n = atoi(argv[2]);
   fixcol(argv[1],n);
   return 0;
 }
+*/
