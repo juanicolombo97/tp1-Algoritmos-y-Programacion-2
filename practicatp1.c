@@ -2,13 +2,21 @@
 #include <stdlib.h>
 #include <stdio.h>
 /*
-
 int main(){
   // pruebas para tp1
-  char* cadena = malloc(sizeof(char));
-  if(cadena == NULL ){
-    printf("holaaaa\n");
+  char hola[] = "[ho[la]aaa]";
+  char  array[1000];
+  int x=0;
+  while(hola[x] != '\0'){
+    array[x] = hola[x];
+    x++;
   }
-  return 0;
+  int y = 0;
+  while(array[y]!= '\0'){
+    printf("%c\n",array[y]);
+    y++;
+  }
+
+
 }
 */

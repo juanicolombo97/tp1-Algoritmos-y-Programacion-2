@@ -89,9 +89,6 @@ char **split(const char *str, char sep){
   return arreglo;
 }
 
-
-
-
 void free_strv(char *strv[]){
   if(!strv) return;
   size_t pos = 0;
