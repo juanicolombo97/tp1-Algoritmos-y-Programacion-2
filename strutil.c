@@ -69,12 +69,14 @@ char *join(char **strv, char sep){
 
 char **split(const char *str, char sep){
   size_t separaciones = cant_sep(str,sep)+2;
+  if(sep == '\0') separaciones = 2;
   char** arreglo = malloc(sizeof(char*) * (separaciones));
   if(!arreglo) return NULL;
   int y=0;
   int inicio = 0;
   if(sep == '\0'){
-    arreglo[y] = substr(&str[0],strlen(str));
+    arreglo[0] = substr(&str[0],strlen(str));
+    arreglo[1] = NULL;
     return arreglo;
   }
   for(int x = 0;x<= strlen(str);x++){
@@ -92,7 +94,7 @@ char **split(const char *str, char sep){
 void free_strv(char *strv[]){
   if(!strv) return;
   size_t pos = 0;
-  while(!strv[pos]){
+  while(strv[pos]){
     free(strv[pos]);
     pos++;
   }
